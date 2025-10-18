@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
@@ -6,7 +6,6 @@
     font-size: 13px;
     line-height: 18px;
     color: #515076;
-
 }
 
 .card-container {
@@ -57,7 +56,6 @@
 
 .cards-container {
     width: 1280px;
-    /* height: 1715px; */
     background: #FFFFFF;
     padding-right: 85px;
     padding-left: 85px;
@@ -66,7 +64,8 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 45px;
-    background-image: url(./images/background-picture.png);
+    list-style-type: none;
+    background-image: url("./images/background-picture.png");
     background-size: 790px 697px;
     background-repeat: no-repeat;
     background-position: left 85px top 0px;
@@ -77,8 +76,4 @@
     font-size: 70px;
     width: 846px;
     height: 78px;
-    /* line-height: 78px; */
-    margin-top: 220px;
-    margin-right: 132px;
-    margin-left: 132px;
 }
