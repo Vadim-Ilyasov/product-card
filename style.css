@@ -102,10 +102,10 @@
     position: relative;
 }
 
-.color-button {
-    background-color:aquamarine;
+.bg-aqua {
+    background-color: aquamarine;
 }
 
-.color-button.after {
+.bg-dark-violet {
     background-color: #515076;
 }
