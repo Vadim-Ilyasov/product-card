@@ -22,6 +22,7 @@
 .product-category {
     font-size: 12px;
     line-height: 24px;
+    padding-top: 30px;
     text-transform: uppercase;
     color: #A5A3B9;
 }
@@ -30,6 +31,7 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 27px;
+    margin-top: 5px;
     margin-bottom: 5px;
 }
 
@@ -44,6 +46,7 @@
 }
 
 .product-price-container {
+    margin-top: 25px;
     display: flex;
     justify-content: space-between;
 }
@@ -54,21 +57,35 @@
     line-height: 24px;
 }
 
-.cards-container {
+.product-price {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.page-cards {
     width: 1280px;
-    background: #FFFFFF;
+    height: 1715px;
     padding-right: 85px;
     padding-left: 85px;
-    padding-bottom: 116px;
+    background: #FFFFFF;
+    background-image: url("./images/background-picture.png");
+    background-size: 790px 697px;
+    background-repeat: no-repeat;
+    background-position: left 85px top -300px;
+}
+
+.cards-container {
+    width: 1110px;
+    height: 1191px;
+    background: #FFFFFF;
+    margin-bottom: 116px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 45px;
     list-style-type: none;
-    background-image: url("./images/background-picture.png");
-    background-size: 790px 697px;
-    background-repeat: no-repeat;
-    background-position: left 85px top 0px;
 }
 
 .headline {
@@ -76,4 +93,19 @@
     font-size: 70px;
     width: 846px;
     height: 78px;
+    margin-left: 132px;
+    margin-top: 220px;
+    margin-bottom: 110px;
+}
+
+.page-management {
+    position: relative;
+}
+
+.bg-aqua {
+    background-color: aquamarine;
+}
+
+.bg-dark-violet {
+    background-color: #515076;
 }
