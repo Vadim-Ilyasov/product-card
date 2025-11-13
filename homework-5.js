@@ -1,10 +1,11 @@
 // Функция принимающая два параметра : город и температура воздуха.
 
 function getOutsideTemperatureInfo(cityName, temperature) {
-    console.log(`Сейчас в ${cityName} температура  — ${temperature} градусов по Цельсию`)
+    return `Сейчас в ${cityName} температура  — ${temperature} градусов по Цельсию`
 }
 
-getOutsideTemperatureInfo('Уфа', -7)
+const message = getOutsideTemperatureInfo('Уфа', -7)
+console.log(message)
 
 // функция которая сравнивает со скоростью звука и выводит соответсвующий результат
 
@@ -25,19 +26,19 @@ checkSpeedOfSound(327)
 // функция проверяющая текущий бюджет на необходимое количество для покупки товара
 
 const productName = 'грейпфрут'
-const priceProduct = 500
+const productPrice = 500
 
-function checkBudget(amount) {
-    if(amount > priceProduct) {
+function buyProduct(amountBudget) {
+    if (amountBudget > productPrice) {
         console.log(`${productName} приобретен.Спасибо за покупку!`)
     } else {
-        const residual = priceProduct - amount
+        const residual = productPrice - amountBudget
         console.log(`Вам не хватает ${residual}, пополните баланс`)
     }
 
 }
 
-checkBudget(600)
+buyProduct(600)
 
 // функция преобразующая введенные данные в индекс массы тела и сравнивающая результат  
 
