@@ -20,15 +20,7 @@ const commentsOfSpecificEmail = listOfComments.filter(comment => comment.email.i
 console.log(commentsOfSpecificEmail)
 
 
-const anotherListComments = listOfComments.map(comment => {
-    if(comment.id <= 5) {
-         comment.postId = 2
-    }  else {
-         comment.postId = 1
-    }
-    return comment
-})
-
+const anotherListComments = listOfComments.map(comment => ({...comment, postId: comment.id <= 5 ? 2 : 1}))
 console.log(anotherListComments)
 
 
@@ -37,13 +29,9 @@ const listOfShortComments = listOfComments.map(comment => ({id: comment.id, name
 console.log(listOfShortComments)
 
 
-const isSizeBody = listOfComments.map(obj => {
-    return {
-        ...obj, isInvalid: obj.body > 180
-    }
-})
-
+const isSizeBody = listOfComments.map(obj => ({...obj, isInvalid: obj.body > 180}))
 console.log(isSizeBody)
+
 
 const emailArrayWithReduce = listOfComments.reduce((accumulator,comment) => {
     accumulator.push(comment.email)
