@@ -8,7 +8,7 @@
     color: #515076;
 }
 
-.card-container {
+ .card-container {
     width: 340px;
     height: 573px;
     padding-right: 25px;
@@ -66,9 +66,9 @@
 
 .page-cards {
     width: 1280px;
-    height: 1715px;
-    padding-right: 85px;
-    padding-left: 85px;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
     background: #FFFFFF;
     background-image: url("./images/background-picture.png");
     background-size: 790px 697px;
@@ -76,11 +76,11 @@
     background-position: left 85px top -300px;
 }
 
-.cards-container {
+#product-list {
     width: 1110px;
     height: 1191px;
     background: #FFFFFF;
-    margin-bottom: 116px;
+    /* margin-bottom: 116px; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
