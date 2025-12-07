@@ -29,7 +29,7 @@ console.log(namesLikeKeys)
 
 
 function requestAmountCards() {
-  let amount = Number(prompt('Сколько карточек отобразить? От 1 до 5'))
+  const amount = Number(prompt('Сколько карточек отобразить? От 1 до 5'))
     if(amount >= 1 && amount <= 5) {
       viewCards(amount)
     } else {
