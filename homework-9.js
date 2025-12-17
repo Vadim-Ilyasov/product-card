@@ -10,20 +10,20 @@ outputEmail.addEventListener('submit', (event) => {
 })
 
 
-  //Модальное окно
+//Модальное окно
 
-  const openModal = document.querySelector('.register-button')
-  const closeModal = document.querySelector('.modal-close-button')
-  const modalWindow = document.querySelector('.modal')
+const openModal = document.querySelector('.register-button')
+const closeModal = document.querySelector('.modal-close-button')
+const modalWindow = document.querySelector('.modal')
 
-  openModal.addEventListener('click', () => {
-    modalWindow.classList.add('modal-showed');
-  })
+openModal.addEventListener('click', () => {
+  modalWindow.classList.add('modal-showed');
+})
 
-  closeModal.addEventListener('click', () => {
-    modalWindow.classList.remove('modal-showed')
-  })
- 
+closeModal.addEventListener('click', () => {
+  modalWindow.classList.remove('modal-showed')
+})
+
 //  Все поля должны иметь валидацию. Если пользователь ввел два разных пароля или форма невалидна 
 //  (используем метод checkValidity()) - мы должны предупредить его о том, что регистрация отклонена. 
 //  Если регистрация успешна - выводим значения формы в лог, как в задании №4. 
@@ -35,19 +35,19 @@ let user = undefined
 const registrForm = document.querySelector('#register-form')
 registrForm.addEventListener('submit', (event) => {
   event.preventDefault();
-  if(!registrForm.checkValidity()) {
+  if (!registrForm.checkValidity()) {
     alert('Неверный формат заполнения')
     return
   }
   const form = event.target
   const formData = new FormData(form)
   const formInfo = Object.fromEntries(formData.entries())
-  if(formInfo.password !== formInfo.repeatPassword) {
+  if (formInfo.password !== formInfo.repeatPassword) {
     alert('Пароли не совпадают')
     return
   }
   user = formInfo
   user.createOn = new Date()
   console.log(user)
-  modalWindow.classList.remove('modal-showed') 
+  modalWindow.classList.remove('modal-showed')
 })
