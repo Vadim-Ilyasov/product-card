@@ -1,3 +1,6 @@
+import {Modal} from './Modal.js'
+import {Form} from './Form.js'
+
 //выводить консоль лог в виде объекта:  { email: 'введенная почта' }
 
 const outputEmail = document.querySelector('#email-form');
@@ -10,44 +13,47 @@ outputEmail.addEventListener('submit', (event) => {
 })
 
 
+
+
+
 //Модальное окно
 
 const openModal = document.querySelector('.register-button')
 const closeModal = document.querySelector('.modal-close-button')
 const modalWindow = document.querySelector('.modal')
 
-openModal.addEventListener('click', () => {
-  modalWindow.classList.add('modal-showed');
-})
+const modal = new Modal('modal','.modal-close-button')
+modal.initOpen(openModal)
+modal.initClose(closeModal)
 
-closeModal.addEventListener('click', () => {
-  modalWindow.classList.remove('modal-showed')
-})
+// Форма регистрации
 
-//  Все поля должны иметь валидацию. Если пользователь ввел два разных пароля или форма невалидна 
-//  (используем метод checkValidity()) - мы должны предупредить его о том, что регистрация отклонена. 
-//  Если регистрация успешна - выводим значения формы в лог, как в задании №4. 
-//  Дополнительно мы должны добавить к этому объекту свойство createdOn и указать туда время создания 
-//  (используем сущность new Date()). 
-//  Также создайте внешнюю переменную user и присвойте ей этот объект. 
-//  После успешной регистрации - модалка должны закрыться. 
-let user = undefined
-const registrForm = document.querySelector('#register-form')
-registrForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  if (!registrForm.checkValidity()) {
-    alert('Неверный формат заполнения')
-    return
-  }
-  const form = event.target
-  const formData = new FormData(form)
-  const formInfo = Object.fromEntries(formData.entries())
-  if (formInfo.password !== formInfo.repeatPassword) {
-    alert('Пароли не совпадают')
-    return
-  }
-  user = formInfo
-  user.createOn = new Date()
-  console.log(user)
-  modalWindow.classList.remove('modal-showed')
-})
+// let user = undefined
+// const registrForm = document.querySelector('#register-form')
+// registrForm.addEventListener('submit', (event) => {
+//   event.preventDefault();
+//   if (!registrForm.checkValidity()) {
+//     alert('Неверный формат заполнения')
+//     return
+//   }
+//   const form = event.target
+//   const formData = new FormData(form)
+//   const formInfo = Object.fromEntries(formData.entries())
+//   if (formInfo.password !== formInfo.repeatPassword) {
+//     alert('Пароли не совпадают')
+//     return
+//   }
+//   user = formInfo
+//   user.createOn = new Date()
+//   console.log(user)
+//   modalWindow.classList.remove('modal-showed')
+// })
+
+const form = new Form('register-form')
+form.isCheckData()
+form.getAllData()
+
+//Создать структуру на ваш выбор, как было показано в лекции (имеется ввиду - с машинами/бьюти-продуктами). 
+// Придумайте свою структуру и реализуйте наследуемость классов
+
+

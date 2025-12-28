@@ -16,7 +16,7 @@
 
 <body>
   <div class="overlay overlay-showed"></div>
-  <button type="button" class="register-button">Зарегистрироваться</button>
+  <button type="button" class="register-button" id="register-button">Зарегистрироваться</button>
   <div class="page-cards">
     <h3 class="headline" id="title">Выбери свой продукт</h3>
     <h3 class="page-management">
@@ -27,7 +27,7 @@
       <button class="bg-aqua" id="change-color-button">Кнопка меняет цвет</button>
     </h3>
     <ul id="product-list"></ul>
-    <template id="product-template">
+    <template id="product-template" class="product-template">
       <li class="card-container">
         <img class="product-img" alt="img" width="290" height="245">
         <span class="product-category"></span>
@@ -42,7 +42,7 @@
       </li>
     </template>
   </div>
-  <div class="modal">
+  <div class="modal" id="modal" >
     <div class="modal-showed">
       <form id="register-form" class="register-form">
         <button type="button" id="modal-close-button" class="modal-close-button">X</button>
@@ -129,7 +129,7 @@
     </div>
   </footer>
   <script src="main.js" type="module"></script>
-  <script src="homework-8.js" type="module"></script>
-  <script src="homework-9.js" type="module"></script>
+  <!-- <script src="homework-8.js" type="module"></script>
+  <script src="homework-9.js" type="module"></script> -->
 </body>
 </html>

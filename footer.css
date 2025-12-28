@@ -67,6 +67,7 @@
     line-height: 100%;
     color: #000000BF;
     border: none;
+    outline: none;
     padding: 36px;
     flex-grow: 1; 
 }
