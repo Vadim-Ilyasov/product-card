@@ -1,34 +1,19 @@
 export class Modal {
-    constructor(modalWindowId, listenButton) {
-        this.modalWindowId = document.getElementById(modalWindowId)
-        this.isOpen = false
-        this.listenToCloseModal(listenButton)
+    constructor(modalWindowId) {
+        this.modalWindowId = document.getElementById(modalWindowId);
+        this.isOpen = false;
+        this.listenToCloseModal();
      
     }
 
     openModal() {
         this.modalWindowId.classList.add('modal-showed');
-        this.isOpen = true
-    }
-
-    initOpen(button) {
-        button.addEventListener('click', () => {
-            this.openModal()
-            this.isOpenModal()
-        })
+        this.isOpen = true;
     }
 
     closeModal() {
-        this.modalWindowId.classList.remove('modal-showed')
-        this.isOpen = false
-    }
-
-    initClose(button) {
-        button.addEventListener('click', () => {
-            this.closeModal()
-            this.isOpenModal()
-        })
-
+        this.modalWindowId.classList.remove('modal-showed');
+        this.isOpen = false;
     }
 
     isOpenModal() {
@@ -39,11 +24,10 @@ export class Modal {
         }
     }
 
-    listenToCloseModal(listenButton) {
-        const checkButton = document.querySelector(listenButton)
-        checkButton.addEventListener('click', (event) => {
-            event.preventDefault();
-            this.closeModal()
+    listenToCloseModal() {
+        const checkButton = document.querySelector('.modal-close-button');
+        checkButton.addEventListener('click', () => {
+            this.closeModal();
         })
     }
 }

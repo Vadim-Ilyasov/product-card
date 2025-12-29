@@ -5,6 +5,6 @@ export class Animal {
     }
 
     showInfo() {
-        console.log(`Это ${this.name} и бегает со скоростью ${this.speedRun} км/ч`)
+        console.log(`Это ${ this.name } и бегает со скоростью ${ this.speedRun } км/ч`);
     }
 }

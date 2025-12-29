@@ -7,6 +7,6 @@ export class Predator extends Animal {
     }
 
     showInfoAboutClaw() {
-        console.log(`У ${this.name} длина когтей равна ${this.clawLenght} см`)
+        console.log(`У ${ this.name } длина когтей равна ${ this.clawLenght } см`);
     }
 }
