@@ -21,11 +21,11 @@ const modalWindow = document.querySelector('.modal');
 const modal = new Modal('modal');
 openModal.addEventListener('click', () => {
   modal.openModal();
-  modal.isOpenModal();
+  console.log(modal.isOpenModal());
 })
 closeModal.addEventListener('click', () => {
   modal.closeModal();
-  modal.isOpenModal();
+  console.log(modal.isOpenModal());
 })
 
 
@@ -36,11 +36,11 @@ let user = undefined;
 const registrForm = new Form('register-form');
 registrForm.form.addEventListener('submit', (event) => {
   event.preventDefault();
-  if (!registrForm.isValidityData()) {
+  if (!registrForm.isValidData()) {
     alert('Неверный формат заполнения');
     return;
   }
-  const personForm = registrForm.getAllData();
+  const personForm = registrForm.getFormValue();
   if (personForm.password !== personForm.repeatPassword) {
     alert('Пароли не совпадают');
     return;

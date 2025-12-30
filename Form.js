@@ -3,7 +3,7 @@ export class Form {
         this.form = document.getElementById(formId);
     }
 
-    isValidityData() {
+    isValidData() {
         return this.form.checkValidity();
     }
 
@@ -11,7 +11,7 @@ export class Form {
         this.form.reset();
     }
 
-    getAllData() {
+    getFormValue() {
         const formData = new FormData(this.form);
         const formInfo = Object.fromEntries(formData.entries());
         return formInfo;
