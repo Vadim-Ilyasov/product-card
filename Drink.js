@@ -1,28 +1,32 @@
 export class Drink {
-    #temperature;
 
-    constructor(name, size, price, temperature) {
-        this.name = name;
-        this.size = size;
-        this.price = price;
-        this.#temperature = temperature;
-    }
+  #temperature;
 
-    getDrinkInfo() { }
+  constructor(name, size, price, temperature) {
+    this.name = name;
+    this.size = size;
+    this.price = price;
+    this.#temperature = temperature;
+  }
 
-    getDrinkTemperature() {
-        return this.#temperature
-     }
+  getDrinkInfo() {
+    return [this.name, this.size, this.price].toString();
+  }
 
-    setDrinkTemperature(drinkTemperature) {
-        this.#temperature = drinkTemperature;
-     }
+  getDrinkTemperature() {
+    return this.#temperature
+  }
 
-    #prepareDrink() { 
-        console.log(`${this.name} в объеме ${this.size} литров стоит ${this.price} ₽ и готов к выдаче`);
-    }
+  setDrinkTemperature(drinkTemperature) {
+    this.#temperature = drinkTemperature;
+  }
 
-    serveDrink() {
-        this.#prepareDrink();
-     }
+  #prepareDrink() {
+    console.log(`${ this.name } в объеме ${ this.size } литров стоит ${ this.price } ₽ и готов к выдаче`);
+  }
+
+  serveDrink() {
+    this.#prepareDrink();
+  }
+
 }

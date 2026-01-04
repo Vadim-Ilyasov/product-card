@@ -1,26 +1,28 @@
 import { Drink } from './Drink.js'
 
 export class Tea extends Drink {
-    constructor(name, size, price, typeOfLeaf, teaAdditive) {
-        super(name, size, price);
-        this.typeOfLeaf = typeOfLeaf;
-        this.teaAdditive = teaAdditive;
-    }
 
-    getDrinkInfo() {
-        return [this.name, this.size, this.price, this.typeOfLeaf, this.teaAdditive].toString();
-    }
+  constructor(name, size, price, typeOfLeaf, teaAdditive) {
+    super(name, size, price);
+    this.typeOfLeaf = typeOfLeaf;
+    this.teaAdditive = teaAdditive;
+  }
 
-    getDrinkTemperature() {
-        return super.getDrinkTemperature();
-    }
+  getDrinkInfo() {
+    return [super.getDrinkInfo(), this.typeOfLeaf, this.teaAdditive].toString();
+  }
 
-    setDrinkTemperature(temperature) {
-        super.setDrinkTemperature(temperature);
-    }
+  getDrinkTemperature() {
+    return super.getDrinkTemperature();
+  }
 
-    serveDrink() {
-        super.serveDrink();
-        console.log(`чай ${this.typeOfLeaf} и с ${this.teaAdditive} температура чая ${this.getDrinkTemperature()}°C`);
-    }
+  setDrinkTemperature(temperature) {
+    super.setDrinkTemperature(temperature);
+  }
+
+  serveDrink() {
+    super.serveDrink();
+    console.log(`чай ${ this.typeOfLeaf } и с ${ this.teaAdditive } температура чая ${ this.getDrinkTemperature() }°C`);
+  }
+
 }

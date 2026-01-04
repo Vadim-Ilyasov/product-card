@@ -1,25 +1,27 @@
 import { Drink } from './Drink.js'
 
 export class Cocoa extends Drink {
-    constructor(name, size, price, typeOfMilk) {
-        super(name, size, price);
-        this.milk = typeOfMilk;
-    }
 
-    getDrinkInfo() {
-        return [this.name, this.size, this.price, this.milk].toString();
-    }
+  constructor(name, size, price, typeOfMilk) {
+    super(name, size, price);
+    this.milk = typeOfMilk;
+  }
 
-    getDrinkTemperature() {
-        return super.getDrinkTemperature();
-    }
+  getDrinkInfo() {
+    return [super.getDrinkInfo(), this.milk].toString();
+  }
 
-    setDrinkTemperature(temperature) {
-        super.setDrinkTemperature(temperature);
-    }
+  getDrinkTemperature() {
+    return super.getDrinkTemperature();
+  }
 
-    serveDrink() {
-        super.serveDrink();
-        console.log(`также добавлено ${this.milk} и температура какао напитка ${this.getDrinkTemperature()}°C`);
-    }
+  setDrinkTemperature(temperature) {
+    super.setDrinkTemperature(temperature);
+  }
+
+  serveDrink() {
+    super.serveDrink();
+    console.log(`также добавлено ${ this.milk } и температура какао напитка ${ this.getDrinkTemperature() }°C`);
+  }
+
 }

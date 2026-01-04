@@ -1,25 +1,27 @@
 import { Drink } from './Drink.js'
 
 export class Coffee extends Drink {
-    constructor(name, size, price, typeOfMilk) {
-        super(name, size, price);
-        this.typeOfMilk = typeOfMilk;
-    }
 
-    getDrinkInfo() {
-        return [this.name, this.size, this.price, this.typeOfMilk].toString();
-    }
+  constructor(name, size, price, typeOfMilk) {
+    super(name, size, price);
+    this.typeOfMilk = typeOfMilk;
+  }
 
-    getDrinkTemperature() {
-        return super.getDrinkTemperature();
-    }
+  getDrinkInfo() {
+    return [super.getDrinkInfo(), this.typeOfMilk].toString();
+  }
 
-    setDrinkTemperature(temperature) {
-        super.setDrinkTemperature(temperature);
-    }
+  getDrinkTemperature() {
+    return super.getDrinkTemperature();
+  }
 
-    serveDrink() {
-        super.serveDrink();
-        console.log(`также добавлено ${this.typeOfMilk} и температура кофе ${this.getDrinkTemperature()}°C`);
-    }
+  setDrinkTemperature(temperature) {
+    super.setDrinkTemperature(temperature);
+  }
+
+  serveDrink() {
+    super.serveDrink();
+    console.log(`также добавлено ${ this.typeOfMilk } и температура кофе ${ this.getDrinkTemperature() }°C`);
+  }
+
 }
