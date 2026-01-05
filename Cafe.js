@@ -1,15 +1,17 @@
 
 export class Cafe {
-    constructor(name, location) {
-        this.cafeName = name;
-        this.location = location;
-    }
 
-    getInfoAboutCafe() {
-        return [this.cafeName, this.location].toString();
-    }
+  constructor(name, location) {
+    this.cafeName = name;
+    this.location = location;
+  }
 
-    orderDrink(drink) {
-        drink.serveDrink();
-    }
+  getInfoAboutCafe() {
+    return [this.cafeName, this.location].toString();
+  }
+
+  orderDrink(drink) {
+    drink.serveDrink();
+  }
+
 }
