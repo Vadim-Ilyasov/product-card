@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Users</title>
+  <link rel="stylesheet" href="async.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div id="loader" class="loader">
+    <div class="loader-content">
+        <p>Загрузка данных...</p>
+    </div>
+</div>
+  <h3 class="headline" id="title">Список пользователей</h3>
+  <div class="page-users">
+    <h3 class="page-management">
+      <button id="delete-all-cards">Удалить все карточки</button>
+      <button id="get-all-cards">Получить все карточки</button>
+    </h3>
+    <ul id="user-list"></ul>
+    <template id="user-template" class="user-template">
+      <li class="user-container">
+        <div class="user-info">
+          <p>id: <span class="id"></span></p>
+          <p>name: <span class="name"></span></p>
+          <p>surname: <span class="surname"></span></p>
+          <p>email: <span class="email"></span></p>
+          <p>age: <span class="age"></span></p>
+        </div>
+        <button type="button" class="delete-button" id="delete-button">Удалить</button>
+      </li>
+    </template>
+  </div>
+  <script src="async.js" type="module"></script>
+</body>
+
+</html>
